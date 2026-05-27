@@ -1,6 +1,9 @@
 # Approach Document: CGCEL Demand Forecasting Solution
 
-**Team Name:** CromptonForecasters  
+**Team Name:** Shackel Not Found
+--
+**Team Members:** Phani Bhushan & Aryan Shrivastava
+--
 **Date:** 27 May 2026
 
 ---
