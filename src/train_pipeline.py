@@ -23,7 +23,7 @@ from src.config import (
     TRAIN_START,
 )
 from src.feature_engineering import run_all as run_features
-from src.metrics import compute_wape, save_metrics
+from src.metrics import compute_rmse, compute_wape, save_metrics
 from src.models.baselines import (
     baseline_for_cluster,
     baseline_vectorized,
@@ -111,11 +111,17 @@ def _prep_X(df: pd.DataFrame, features: list[str]) -> pd.DataFrame:
 
 
 def _detailed_metrics(val: pd.DataFrame, tiers: pd.DataFrame | None = None) -> dict:
-    out = {"overall_wape_pct": round(compute_wape(val["Demand"], val["Predicted_Demand"]) * 100, 4)}
+    out = {
+        "overall_wape_pct": round(compute_wape(val["Demand"], val["Predicted_Demand"]) * 100, 4),
+        "overall_rmse": round(compute_rmse(val["Demand"], val["Predicted_Demand"]), 6),
+    }
     for m in sorted(val["Date"].unique()):
         sub = val[val["Date"] == m]
         out[f"wape_{m.strftime('%Y_%m')}"] = round(
             compute_wape(sub["Demand"], sub["Predicted_Demand"]) * 100, 4
+        )
+        out[f"rmse_{m.strftime('%Y_%m')}"] = round(
+            compute_rmse(sub["Demand"], sub["Predicted_Demand"]), 6
         )
     if tiers is not None:
         merged = val.merge(
@@ -129,6 +135,9 @@ def _detailed_metrics(val: pd.DataFrame, tiers: pd.DataFrame | None = None) -> d
             if len(sub):
                 out[f"wape_tier_{tier}"] = round(
                     compute_wape(sub["Demand"], sub["Predicted_Demand"]) * 100, 4
+                )
+                out[f"rmse_tier_{tier}"] = round(
+                    compute_rmse(sub["Demand"], sub["Predicted_Demand"]), 6
                 )
     return out
 
@@ -293,7 +302,8 @@ def forecast_category(
 
     val = df_forecast[df_forecast["Date"] < "2026-04-01"]
     wape = compute_wape(val["Demand"].values, val["Predicted_Demand"].values)
-    print(f"  Holdout WAPE (Jan–Mar 2026): {wape * 100:.2f}%")
+    rmse = compute_rmse(val["Demand"].values, val["Predicted_Demand"].values)
+    print(f"  Holdout WAPE (Jan–Mar 2026): {wape * 100:.2f}% | RMSE: {rmse:.4f}")
 
     detail = _detailed_metrics(val, tiers)
     detail["folds"] = evaluate_folds(val)
@@ -307,7 +317,15 @@ def forecast_category(
         "hurdle_threshold": getattr(hurdle, "threshold", None),
         "baseline_method": bl_method,
     }
-    save_tuning(category, {**tuning_record, "wape_pct": round(wape * 100, 4), "detail": detail})
+    save_tuning(
+        category,
+        {
+            **tuning_record,
+            "wape_pct": round(wape * 100, 4),
+            "rmse": round(rmse, 6),
+            "detail": detail,
+        },
+    )
 
     out = df_forecast[
         [
@@ -331,6 +349,7 @@ def forecast_category(
     metrics = {
         "category": category,
         "wape_pct": round(wape * 100, 4),
+        "rmse": round(rmse, 6),
         "strategy": strategy,
         "blend_weights": weights,
         "share_alpha": share_alpha,

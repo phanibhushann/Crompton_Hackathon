@@ -4,20 +4,27 @@
   "share_alpha": 0.85,
   "blend_weights": {
     "lgbm": 0.6825,
+    "hierarchical": 0.07,
     "hurdle": 0.2475,
-    "baseline": 0.0,
-    "hierarchical": 0.07
+    "baseline": 0.0
   },
   "hurdle_threshold": 0.5,
   "baseline_method": "lag1",
   "wape_pct": 90.1564,
+  "rmse": 598.248526,
   "detail": {
     "overall_wape_pct": 90.1564,
+    "overall_rmse": 598.248526,
     "wape_2026_01": 91.2193,
+    "rmse_2026_01": 403.533907,
     "wape_2026_02": 91.9282,
+    "rmse_2026_02": 573.782217,
     "wape_2026_03": 88.4556,
+    "rmse_2026_03": 762.652117,
     "wape_tier_top10": 74.073,
+    "rmse_tier_top10": 1228.852164,
     "wape_tier_tail": 100.6216,
+    "rmse_tier_tail": 479.492471,
     "folds": {
       "holdout_2026": 90.1564
     }

@@ -1,4 +1,4 @@
-# CGCEL Demand Forecasting — CromptonForecasters
+# CGCEL Demand Forecasting — Shackle Not Found
 
 End-to-end machine learning pipeline for **Crompton Greaves Consumer Electricals Ltd. (CGCEL)** monthly demand forecasting at **Branch × SKU** granularity across four product lines: **Fans**, **LDA** (Large Domestic Appliances), **Pumps**, and **SDA** (Small Domestic Appliances).
 
@@ -8,7 +8,7 @@ This repository produces competition-ready submissions, reproducible validation 
 
 ## Team
 
-**Team name:** Shackel Not Found
+**Team name:** Shackle Not Found
 **Team members:** PhaniBhushan & Aryan Shrivastava
 
 ---
@@ -81,7 +81,7 @@ Crompton_Hackathon/
 ├── submissions/                  # Per-category prediction CSVs
 ├── reports/
 │   └── validation_metrics.json
-├── CromptonForecasters_Submission_v1.csv   # Combined submission file
+├── Shackle_Not_Found_Submission_v1.csv   # Combined submission file
 ├── reproduce_forecasting.ipynb
 ├── Approach_Document.md          # Methodology for judges
 ├── requirements.txt
@@ -209,7 +209,7 @@ flowchart TB
 
   subgraph outputs [Outputs]
     sub[submissions/*.csv]
-    final[CromptonForecasters_Submission_v1.csv]
+    final[Shackle_Not_Found_Submission_v1.csv]
     metrics[reports/validation_metrics.json]
   end
 
@@ -410,7 +410,7 @@ After a run, see `reports/validation_metrics.json`:
 
 ### Competition submission
 
-**File:** `CromptonForecasters_Submission_v1.csv`
+**File:** `Shackle_Not_Found_Submission_v1.csv`
 
 | Column | Description |
 |--------|-------------|
@@ -423,7 +423,7 @@ After a run, see `reports/validation_metrics.json`:
 | `SKU_Code` | SKU identifier |
 | `Predicted_Demand` | Non-negative forecast quantity |
 
-Naming convention from brief: `TeamName_Submission_v1.csv` → team name **CromptonForecasters**.
+Naming convention from brief: `TeamName_Submission_v1.csv` → **Shackle_Not_Found_Submission_v1.csv**.
 
 ### Per-category files
 

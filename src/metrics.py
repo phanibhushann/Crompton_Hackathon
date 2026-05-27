@@ -15,10 +15,20 @@ def compute_wape(actual: np.ndarray, predicted: np.ndarray) -> float:
     return float(np.sum(np.abs(actual - predicted)) / total)
 
 
+def compute_rmse(actual: np.ndarray, predicted: np.ndarray) -> float:
+    """Root Mean Squared Error (RMSE)."""
+    actual = np.asarray(actual, dtype=float)
+    predicted = np.asarray(predicted, dtype=float)
+    if actual.size == 0:
+        return 0.0
+    return float(np.sqrt(np.mean((actual - predicted) ** 2)))
+
+
 def evaluate_frame(df: pd.DataFrame, actual_col: str = "Demand", pred_col: str = "Predicted_Demand") -> dict:
     mask = df[actual_col].notna()
     wape = compute_wape(df.loc[mask, actual_col].values, df.loc[mask, pred_col].values)
-    return {"wape": wape, "wape_pct": wape * 100, "rows": int(mask.sum())}
+    rmse = compute_rmse(df.loc[mask, actual_col].values, df.loc[mask, pred_col].values)
+    return {"wape": wape, "wape_pct": wape * 100, "rmse": rmse, "rows": int(mask.sum())}
 
 
 def save_metrics(report: dict, path: Path) -> None:

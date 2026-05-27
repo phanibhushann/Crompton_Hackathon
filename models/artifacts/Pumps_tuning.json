@@ -3,21 +3,28 @@
   "strategy": "lgbm_primary",
   "share_alpha": 0.85,
   "blend_weights": {
-    "hierarchical": 0.0525,
     "lgbm": 0.9475,
+    "hierarchical": 0.0525,
     "hurdle": 0.0,
     "baseline": 0.0
   },
   "hurdle_threshold": null,
   "baseline_method": "rolling3",
   "wape_pct": 58.8266,
+  "rmse": 241.824716,
   "detail": {
     "overall_wape_pct": 58.8266,
+    "overall_rmse": 241.824716,
     "wape_2026_01": 63.6283,
+    "rmse_2026_01": 296.089654,
     "wape_2026_02": 56.9876,
+    "rmse_2026_02": 192.27094,
     "wape_2026_03": 56.5942,
+    "rmse_2026_03": 225.389401,
     "wape_tier_top10": 56.9276,
+    "rmse_tier_top10": 764.398171,
     "wape_tier_tail": 101.6085,
+    "rmse_tier_tail": 8.446504,
     "folds": {
       "holdout_2026": 58.8266
     }

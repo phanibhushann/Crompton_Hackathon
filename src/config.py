@@ -8,8 +8,8 @@ ARTIFACTS_DIR = REPO_ROOT / "models" / "artifacts"
 SUBMISSIONS_DIR = REPO_ROOT / "submissions"
 REPORTS_DIR = REPO_ROOT / "reports"
 
-TEAM_NAME = "CromptonForecasters"
-SUBMISSION_FILE = REPO_ROOT / f"{TEAM_NAME}_Submission_v1.csv"
+TEAM_NAME = "Shackle Not Found"
+SUBMISSION_FILE = REPO_ROOT / "Shackle_Not_Found_Submission_v1.csv"
 
 CATEGORIES = ["Fans", "LDA", "Pumps", "SDA"]
 

@@ -3,23 +3,30 @@
   "strategy": "hierarchy_blend",
   "share_alpha": 0.8,
   "blend_weights": {
-    "hierarchical": 0.2,
-    "lgbm": 0.7,
-    "hurdle": 0.1,
+    "lgbm": 0.895,
+    "hierarchical": 0.07,
+    "hurdle": 0.035,
     "baseline": 0.0
   },
   "hurdle_threshold": 0.55,
   "baseline_method": "lag1",
-  "wape_pct": 92.4859,
+  "wape_pct": 95.0797,
+  "rmse": 74.067967,
   "detail": {
-    "overall_wape_pct": 92.4859,
-    "wape_2026_01": 80.836,
-    "wape_2026_02": 102.1931,
-    "wape_2026_03": 99.5867,
-    "wape_tier_top10": 84.6181,
+    "overall_wape_pct": 95.0797,
+    "overall_rmse": 74.067967,
+    "wape_2026_01": 81.748,
+    "rmse_2026_01": 98.609768,
+    "wape_2026_02": 107.9907,
+    "rmse_2026_02": 56.741795,
+    "wape_2026_03": 101.9908,
+    "rmse_2026_03": 59.284682,
+    "wape_tier_top10": 88.6462,
+    "rmse_tier_top10": 217.688001,
     "wape_tier_tail": 106.7142,
+    "rmse_tier_tail": 28.901139,
     "folds": {
-      "holdout_2026": 92.4859
+      "holdout_2026": 95.0797
     }
   }
 }

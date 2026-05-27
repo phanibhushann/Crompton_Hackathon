@@ -1,13 +1,14 @@
 {
-  "team": "CromptonForecasters",
+  "team": "Shackle Not Found",
   "categories": {
     "Fans": {
       "category": "Fans",
       "wape_pct": 90.1564,
+      "rmse": 598.248526,
       "strategy": "hierarchy_blend",
       "blend_weights": {
-        "hierarchical": 0.07,
         "lgbm": 0.6825,
+        "hierarchical": 0.07,
         "hurdle": 0.2475,
         "baseline": 0.0
       },
@@ -16,11 +17,17 @@
       "baseline_method": "lag1",
       "detail": {
         "overall_wape_pct": 90.1564,
+        "overall_rmse": 598.248526,
         "wape_2026_01": 91.2193,
+        "rmse_2026_01": 403.533907,
         "wape_2026_02": 91.9282,
+        "rmse_2026_02": 573.782217,
         "wape_2026_03": 88.4556,
+        "rmse_2026_03": 762.652117,
         "wape_tier_top10": 74.073,
+        "rmse_tier_top10": 1228.852164,
         "wape_tier_tail": 100.6216,
+        "rmse_tier_tail": 479.492471,
         "folds": {
           "holdout_2026": 90.1564
         }
@@ -29,10 +36,11 @@
     "LDA": {
       "category": "LDA",
       "wape_pct": 95.0797,
+      "rmse": 74.067967,
       "strategy": "hierarchy_blend",
       "blend_weights": {
-        "hierarchical": 0.07,
         "lgbm": 0.895,
+        "hierarchical": 0.07,
         "hurdle": 0.035,
         "baseline": 0.0
       },
@@ -41,11 +49,17 @@
       "baseline_method": "lag1",
       "detail": {
         "overall_wape_pct": 95.0797,
+        "overall_rmse": 74.067967,
         "wape_2026_01": 81.748,
+        "rmse_2026_01": 98.609768,
         "wape_2026_02": 107.9907,
+        "rmse_2026_02": 56.741795,
         "wape_2026_03": 101.9908,
+        "rmse_2026_03": 59.284682,
         "wape_tier_top10": 88.6462,
+        "rmse_tier_top10": 217.688001,
         "wape_tier_tail": 106.7142,
+        "rmse_tier_tail": 28.901139,
         "folds": {
           "holdout_2026": 95.0797
         }
@@ -54,10 +68,11 @@
     "Pumps": {
       "category": "Pumps",
       "wape_pct": 58.8266,
+      "rmse": 241.824716,
       "strategy": "lgbm_primary",
       "blend_weights": {
-        "hierarchical": 0.0525,
         "lgbm": 0.9475,
+        "hierarchical": 0.0525,
         "hurdle": 0.0,
         "baseline": 0.0
       },
@@ -66,11 +81,17 @@
       "baseline_method": "rolling3",
       "detail": {
         "overall_wape_pct": 58.8266,
+        "overall_rmse": 241.824716,
         "wape_2026_01": 63.6283,
+        "rmse_2026_01": 296.089654,
         "wape_2026_02": 56.9876,
+        "rmse_2026_02": 192.27094,
         "wape_2026_03": 56.5942,
+        "rmse_2026_03": 225.389401,
         "wape_tier_top10": 56.9276,
+        "rmse_tier_top10": 764.398171,
         "wape_tier_tail": 101.6085,
+        "rmse_tier_tail": 8.446504,
         "folds": {
           "holdout_2026": 58.8266
         }
@@ -79,10 +100,11 @@
     "SDA": {
       "category": "SDA",
       "wape_pct": 76.7468,
+      "rmse": 137.624566,
       "strategy": "hurdle_blend",
       "blend_weights": {
-        "hierarchical": 0.265,
         "lgbm": 0.1225,
+        "hierarchical": 0.265,
         "hurdle": 0.1575,
         "baseline": 0.455
       },
@@ -91,11 +113,17 @@
       "baseline_method": "lag1",
       "detail": {
         "overall_wape_pct": 76.7468,
+        "overall_rmse": 137.624566,
         "wape_2026_01": 64.037,
+        "rmse_2026_01": 89.853208,
         "wape_2026_02": 74.0414,
+        "rmse_2026_02": 127.663373,
         "wape_2026_03": 88.8354,
+        "rmse_2026_03": 180.138912,
         "wape_tier_top10": 70.6408,
+        "rmse_tier_top10": 390.050869,
         "wape_tier_tail": 105.3765,
+        "rmse_tier_tail": 64.449794,
         "folds": {
           "holdout_2026": 76.7468
         }
