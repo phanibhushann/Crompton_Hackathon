@@ -1,0 +1,25 @@
+{
+  "category": "SDA",
+  "strategy": "hurdle_blend",
+  "share_alpha": 0.85,
+  "blend_weights": {
+    "hierarchical": 0.265,
+    "lgbm": 0.1225,
+    "hurdle": 0.1575,
+    "baseline": 0.455
+  },
+  "hurdle_threshold": 0.45,
+  "baseline_method": "lag1",
+  "wape_pct": 76.7468,
+  "detail": {
+    "overall_wape_pct": 76.7468,
+    "wape_2026_01": 64.037,
+    "wape_2026_02": 74.0414,
+    "wape_2026_03": 88.8354,
+    "wape_tier_top10": 70.6408,
+    "wape_tier_tail": 105.3765,
+    "folds": {
+      "holdout_2026": 76.7468
+    }
+  }
+}

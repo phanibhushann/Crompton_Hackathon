@@ -1,0 +1,25 @@
+{
+  "category": "Pumps",
+  "strategy": "lgbm_primary",
+  "share_alpha": 0.85,
+  "blend_weights": {
+    "hierarchical": 0.0525,
+    "lgbm": 0.9475,
+    "hurdle": 0.0,
+    "baseline": 0.0
+  },
+  "hurdle_threshold": null,
+  "baseline_method": "rolling3",
+  "wape_pct": 58.8266,
+  "detail": {
+    "overall_wape_pct": 58.8266,
+    "wape_2026_01": 63.6283,
+    "wape_2026_02": 56.9876,
+    "wape_2026_03": 56.5942,
+    "wape_tier_top10": 56.9276,
+    "wape_tier_tail": 101.6085,
+    "folds": {
+      "holdout_2026": 58.8266
+    }
+  }
+}

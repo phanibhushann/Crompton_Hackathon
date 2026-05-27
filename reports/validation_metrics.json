@@ -1,0 +1,106 @@
+{
+  "team": "CromptonForecasters",
+  "categories": {
+    "Fans": {
+      "category": "Fans",
+      "wape_pct": 90.1564,
+      "strategy": "hierarchy_blend",
+      "blend_weights": {
+        "hierarchical": 0.07,
+        "lgbm": 0.6825,
+        "hurdle": 0.2475,
+        "baseline": 0.0
+      },
+      "share_alpha": 0.85,
+      "threshold": 0.5,
+      "baseline_method": "lag1",
+      "detail": {
+        "overall_wape_pct": 90.1564,
+        "wape_2026_01": 91.2193,
+        "wape_2026_02": 91.9282,
+        "wape_2026_03": 88.4556,
+        "wape_tier_top10": 74.073,
+        "wape_tier_tail": 100.6216,
+        "folds": {
+          "holdout_2026": 90.1564
+        }
+      }
+    },
+    "LDA": {
+      "category": "LDA",
+      "wape_pct": 95.0797,
+      "strategy": "hierarchy_blend",
+      "blend_weights": {
+        "hierarchical": 0.07,
+        "lgbm": 0.895,
+        "hurdle": 0.035,
+        "baseline": 0.0
+      },
+      "share_alpha": 0.8,
+      "threshold": 0.55,
+      "baseline_method": "lag1",
+      "detail": {
+        "overall_wape_pct": 95.0797,
+        "wape_2026_01": 81.748,
+        "wape_2026_02": 107.9907,
+        "wape_2026_03": 101.9908,
+        "wape_tier_top10": 88.6462,
+        "wape_tier_tail": 106.7142,
+        "folds": {
+          "holdout_2026": 95.0797
+        }
+      }
+    },
+    "Pumps": {
+      "category": "Pumps",
+      "wape_pct": 58.8266,
+      "strategy": "lgbm_primary",
+      "blend_weights": {
+        "hierarchical": 0.0525,
+        "lgbm": 0.9475,
+        "hurdle": 0.0,
+        "baseline": 0.0
+      },
+      "share_alpha": 0.85,
+      "threshold": null,
+      "baseline_method": "rolling3",
+      "detail": {
+        "overall_wape_pct": 58.8266,
+        "wape_2026_01": 63.6283,
+        "wape_2026_02": 56.9876,
+        "wape_2026_03": 56.5942,
+        "wape_tier_top10": 56.9276,
+        "wape_tier_tail": 101.6085,
+        "folds": {
+          "holdout_2026": 58.8266
+        }
+      }
+    },
+    "SDA": {
+      "category": "SDA",
+      "wape_pct": 76.7468,
+      "strategy": "hurdle_blend",
+      "blend_weights": {
+        "hierarchical": 0.265,
+        "lgbm": 0.1225,
+        "hurdle": 0.1575,
+        "baseline": 0.455
+      },
+      "share_alpha": 0.85,
+      "threshold": 0.45,
+      "baseline_method": "lag1",
+      "detail": {
+        "overall_wape_pct": 76.7468,
+        "wape_2026_01": 64.037,
+        "wape_2026_02": 74.0414,
+        "wape_2026_03": 88.8354,
+        "wape_tier_top10": 70.6408,
+        "wape_tier_tail": 105.3765,
+        "folds": {
+          "holdout_2026": 76.7468
+        }
+      }
+    }
+  },
+  "mean_wape_pct": 80.2024
+}

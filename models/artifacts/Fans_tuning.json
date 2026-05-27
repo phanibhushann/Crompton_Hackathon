@@ -1,0 +1,25 @@
+{
+  "category": "Fans",
+  "strategy": "hierarchy_blend",
+  "share_alpha": 0.85,
+  "blend_weights": {
+    "lgbm": 0.6825,
+    "hurdle": 0.2475,
+    "baseline": 0.0,
+    "hierarchical": 0.07
+  },
+  "hurdle_threshold": 0.5,
+  "baseline_method": "lag1",
+  "wape_pct": 90.1564,
+  "detail": {
+    "overall_wape_pct": 90.1564,
+    "wape_2026_01": 91.2193,
+    "wape_2026_02": 91.9282,
+    "wape_2026_03": 88.4556,
+    "wape_tier_top10": 74.073,
+    "wape_tier_tail": 100.6216,
+    "folds": {
+      "holdout_2026": 90.1564
+    }
+  }
+}
